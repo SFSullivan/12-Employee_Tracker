@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/SFSullivan/12-Employee_Tracker/issues"
   },
-  "homepage": "https://github.com/SFSullivan/12-Employee_Tracker#readme"
+  "homepage": "https://github.com/SFSullivan/12-Employee_Tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^9.1.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.4"
+  }
 }
