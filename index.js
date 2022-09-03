@@ -92,7 +92,7 @@ function userChoice(choice) {
 
     };
 
-    if (choice.nav === 'View All Departments') {
+    if (choice.options === 'View All Departments') {
 
         Department.findAll()
             .then(all_departments => {
@@ -104,7 +104,7 @@ function userChoice(choice) {
             .then(() => returnToMenu());
     };
 
-    if (choice.nav === 'View All Roles') {
+    if (choice.options === 'View All Roles') {
 
         Role.findAll()
             .then(roles => {
@@ -116,7 +116,7 @@ function userChoice(choice) {
             .then(() => returnToMenu());
     };
 
-    if (choice.nav === 'Add Department') {
+    if (choice.options === 'Add Department') {
         inquirer.prompt(
             {
                 name: 'new_dep',
@@ -131,12 +131,25 @@ function userChoice(choice) {
             })
 
             .then(() => {
-                backToMenu()
+                returnToMenu()
             })
 
     };
 
+    if (choice.options === 'Add Role') {
+        //new role()
+    };
+
+    if (choice.options === 'Add Employee') {
+        //new employee()
+    };
+
+
 };
+
+//new role function
+
+//new employee function
 
 //start the app
 
