@@ -1,6 +1,6 @@
 # 12-Employee_Tracker
 
-## Your Task
+## The Task
 
 Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
@@ -35,3 +35,7 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 ```
+
+## View the code on [Github](https://github.com/SFSullivan/12-Employee_Tracker)
+
+## Video of app in action [here]()

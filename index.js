@@ -95,11 +95,11 @@ function userChoice(choice) {
     if (choice.options === 'View All Departments') {
 
         Department.findAll()
-            .then(all_departments => {
-                all_departments = all_departments.map(dep => {
+            .then(all_deps => {
+                all_deps = all_deps.map(dep => {
                     return { id: dep.id, dep_name: dep.dep_name }
                 })
-                console.table(all_departments)
+                console.table(all_deps)
             })
             .then(() => returnToMenu());
     };
@@ -149,7 +149,10 @@ function userChoice(choice) {
 
 //new role function
 
+
 //new employee function
+
+
 
 //start the app
 
