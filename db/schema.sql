@@ -4,13 +4,13 @@ CREATE DATABASE employee_db;
 
 USE employee_db;
 
-CREATE TABLE department(
+CREATE TABLE department_table(
     id INT AUTO_INCREMENT PRIMARY KEY,
     department_name VARCHAR(30) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE roles(
+CREATE TABLE roles_table(
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL,
@@ -19,7 +19,7 @@ CREATE TABLE roles(
     FOREIGN KEY (department_id) REFERENCES department (id)
 );
 
-CREATE TABLE employee(
+CREATE TABLE employee_table(
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
