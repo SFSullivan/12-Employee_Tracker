@@ -14,7 +14,26 @@ const navOptions = [
         type: 'list',
         name: 'options',
         message: 'What do you want to do?',
-        choices: ['View Employees', 'View Departments', 'View Roles',]
+        choices: ['View Employees', 'View Departments', 'View Roles', 'Add Department', 'Add Role', 'Add Employee']
+    }
+];
+
+const roles_prompts = [
+    {
+        name: 'new_role',
+        type: 'input',
+        message: 'Title of role:',
+    },
+    {
+        name: 'salary',
+        type: 'input',
+        message: 'Salary:'
+    },
+    {
+        name: 'department',
+        type: 'list',
+        message: 'Department the role is in:',
+        choices: []
     }
 ];
 
@@ -22,27 +41,27 @@ const employ_prompts = [
     {
         name: 'first_name',
         type: 'input',
-        message: 'Employee first name:'
+        message: 'First name:'
     },
     {
         name: 'last_name',
         type: 'input',
-        message: 'Employee last name:'
+        message: 'Last name:'
     },
     {
         name: 'role',
         type: 'list',
-        message: 'Employee role:',
+        message: 'Their role:',
         choices: []
     },
     {
         name: 'manager',
         type: 'list',
-        message: 'Manager (if applicable):',
+        message: 'Manager:',
         choices: ['N/A']
     },
 
-]
+];
 
 function menu() {
     inquirer.prompt(navOptions)
@@ -95,6 +114,26 @@ function userChoice(choice) {
                 console.table(roles)
             })
             .then(() => returnToMenu());
+    };
+
+    if (choice.nav === 'Add Department') {
+        inquirer.prompt(
+            {
+                name: 'new_dep',
+                type: 'input',
+                message: 'Department name:'
+            }
+        )
+            .then(answer => {
+                Department.create({
+                    dep_name: answer.new_dep
+                })
+            })
+
+            .then(() => {
+                backToMenu()
+            })
+
     };
 
 };
