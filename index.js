@@ -9,5 +9,15 @@ const Role = require('./models/Role')
 
 //prompt questions and functions to follow
 
+const navOptions = [
+    {
+        type: 'list',
+        name: 'options',
+        message: 'What do you want to do?',
+        choices: ['View Employees', 'View Departments', 'View Roles',]
+    }
+];
+
+
 
 //start the app
