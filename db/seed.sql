@@ -1,4 +1,4 @@
-USE employee_db;
+use employee_db
 
 INSERT INTO department_table (department_name) VALUES 
     ('Editing'), 
