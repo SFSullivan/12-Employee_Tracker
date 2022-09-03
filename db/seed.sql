@@ -10,7 +10,7 @@ INSERT INTO employee_table (first_name, last_name, role_id, manager_id) VALUES
     ('Mort', 'Goldman', 8, NULL),
     ('Glenn', 'Quagmire', 5, NULL),
     ('Joe', 'Swanson', 6, 8),
-    ('Cleveland', 'Brown', 7, 8)
+    ('Cleveland', 'Brown', 7, 8);
 
 
 INSERT INTO roles_table (title, salary, department_id) VALUES
@@ -21,13 +21,13 @@ INSERT INTO roles_table (title, salary, department_id) VALUES
     ('Human Resources', 55000, 3)
     ('Security Guard', 65000, 4)
     ('Marketer', 70000, 3)
-    ('Team Doctor', 90000, 5)
+    ('Team Doctor', 90000, 5);
 
 
-INSERT INTO department_table (name) VALUES
+INSERT INTO department_table (department_name) VALUES
     ('Coaching'),
     ('Team'),
     ('Admin and Sales'),
     ('Security'),
-    ('Team Staff')
+    ('Team Staff');
 

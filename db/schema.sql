@@ -16,7 +16,7 @@ CREATE TABLE roles_table(
     salary DECIMAL,
     department_id INT DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (department_id) REFERENCES department (id)
+    FOREIGN KEY (department_id) REFERENCES department_table (id)
 );
 
 CREATE TABLE employee_table(
@@ -26,6 +26,6 @@ CREATE TABLE employee_table(
     role_id INT DEFAULT NULL,
     manager_id INT DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (role_id) REFERENCES employee (id),
-    FOREIGN KEY (manager_id) REFERENCES employee (id)
+    FOREIGN KEY (role_id) REFERENCES employee_table (id),
+    FOREIGN KEY (manager_id) REFERENCES employee_table (id)
 );
