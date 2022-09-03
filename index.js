@@ -32,3 +32,23 @@ const navQuestions = [
     },
 ];
 
+function startApp() {
+    inquirer.prompt(navQuestions)
+        .then(answers => {
+            if(questions.choices === navOptions[0]) console.log('You chose to view the departments.')
+
+            if(questions.choices === navOptions[1]) console.log('You chose to view the roles in the company.')
+
+            if(questions.choices === navOptions[2]) console.log('You chose to view employees.')
+
+            if(questions.choices === navOptions[3]) console.log('You chose to add a department.')
+
+            if(questions.choices === navOptions[4]) console.log('You chose to add a role.')
+
+            if(questions.choices === navOptions[5]) console.log('You chose to add an employee.')
+
+            if(questions.choices === navOptions[6]) console.log('You chose to update an employee role.')
+        });
+}
+
+startApp();

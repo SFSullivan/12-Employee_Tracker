@@ -6,20 +6,26 @@ USE employee_db;
 
 CREATE TABLE department(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
-)
+    department_name VARCHAR(30) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 CREATE TABLE roles(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(30),
+    title VARCHAR(30) NOT NULL,
     salary DECIMAL,
-    department_id INT,
-)
+    department_id INT DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (department_id) REFERENCES department (id)
+);
 
 CREATE TABLE employee(
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    role_id INT AUTO_INCREMENT,
-    manager_id INT AUTO_INCREMENT,
-)
+    role_id INT DEFAULT NULL,
+    manager_id INT DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (role_id) REFERENCES employee (id),
+    FOREIGN KEY (manager_id) REFERENCES employee (id)
+);
