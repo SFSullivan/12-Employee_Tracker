@@ -18,6 +18,32 @@ const navOptions = [
     }
 ];
 
+const employ_prompts = [
+    {
+        name: 'first_name',
+        type: 'input',
+        message: 'Employee first name:'
+    },
+    {
+        name: 'last_name',
+        type: 'input',
+        message: 'Employee last name:'
+    },
+    {
+        name: 'role',
+        type: 'list',
+        message: 'Employee role:',
+        choices: []
+    },
+    {
+        name: 'manager',
+        type: 'list',
+        message: 'Manager (if applicable):',
+        choices: ['N/A']
+    },
+
+]
+
 function menu() {
     inquirer.prompt(navOptions)
         .then(choice => {
@@ -75,3 +101,4 @@ function userChoice(choice) {
 
 //start the app
 
+menu();
