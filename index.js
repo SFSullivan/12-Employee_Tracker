@@ -13,30 +13,22 @@ const db = mysql.createPool({
 
 //prompt questions and functions to follow
 
-const menu = [
+const navOptions = [
+    'view departments',
+    'view roles',
+    'view employees',
+    'add a department',
+    'add a role',
+    'add employee',
+    'update employee role',
+]
+
+const navQuestions = [
     {
         type: 'list',
-        name: 'nav',
-        message: 'What do you want to do?',
-        choices: ['View employees', 'View roles', 'View departments', 'Add department', 'Add role', 'Add employee']
-    }
+        name: 'selections',
+        message: 'What would you like to do?',
+        choices: navOptions
+    },
 ];
 
-const role_prompt = [
-    {
-        name: 'new_role',
-        type: 'input',
-        message: 'type in the name of the new role',
-    },
-    {
-        name: 'salary',
-        type: 'input',
-        message: 'input the salary of the new role'
-    },
-    {
-        name: 'department',
-        type: 'list',
-        message: 'what department is this role getting added to',
-        choices: []
-    },
-];
