@@ -38,4 +38,4 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ## View the code on [Github](https://github.com/SFSullivan/12-Employee_Tracker)
 
-## Video of app in action [here]()
+## Video of app in action [here](https://drive.google.com/file/d/1I0SaO5IuhdzNqqIOtWeXoWyigvXoTvcD/view)
