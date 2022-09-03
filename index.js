@@ -18,6 +18,4 @@ const navOptions = [
     }
 ];
 
-
-
 //start the app
